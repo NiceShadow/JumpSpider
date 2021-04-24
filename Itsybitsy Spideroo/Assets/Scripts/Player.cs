@@ -29,6 +29,9 @@ public class Player : MonoBehaviour
     {
         var movement = Input.GetAxis("Horizontal");
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
+        //myRigidbody.transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
+        //Vector3 dis = 
+        //myRigidbody.MovePosition(myRigidbody.transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed);
 
         Vector3 characterScale = transform.localScale;
         if (Input.GetAxis("Horizontal") < 0)
@@ -38,14 +41,15 @@ public class Player : MonoBehaviour
         if (Input.GetAxis("Horizontal") > 0)
         {
             characterScale.x = -initialScale.x;
+
         }
 
         transform.localScale = characterScale;
-        //Input.GetButtonDown("Jump") && 
-        if (Mathf.Abs(myRigidbody.velocity.y) < 0.001f)
+        
+        if (Input.GetButtonDown("Jump") &&  Mathf.Abs(myRigidbody.velocity.y) < 0.001f)
         {
             myRigidbody.AddForce(new Vector2(0, JumpHeight), ForceMode2D.Impulse);
-            heightRef.GetComponent<Animator>().SetTrigger("land");
+            heightRef.GetComponent<Animator>().SetTrigger("stretch");
         }
         if (Mathf.Abs(myRigidbody.velocity.y) > 0.15f)
         {
@@ -54,9 +58,10 @@ public class Player : MonoBehaviour
 
         if (Mathf.Abs(myRigidbody.velocity.y) < 0.01f && !LandedAlready)
         {
-            //playLanding();
+            playLanding();
             LandedAlready = true;
         }
+
     }
 
     void playLanding()
