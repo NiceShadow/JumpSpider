@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     Rigidbody2D myRigidbody;
     Vector2 initialScale;
     bool LandedAlready;
-
+    bool spacePressed = false;
 
     void Start()
     {
@@ -45,8 +45,12 @@ public class Player : MonoBehaviour
         }
 
         transform.localScale = characterScale;
-        
-        if (Input.GetButtonDown("Jump") &&  Mathf.Abs(myRigidbody.velocity.y) < 0.001f)
+
+        if (Input.GetButtonDown("Jump")) spacePressed = true;
+        if (Input.GetButtonUp("Jump")) spacePressed = false;
+
+
+        if (spacePressed &&  Mathf.Abs(myRigidbody.velocity.y) < 0.001f)
         {
             myRigidbody.AddForce(new Vector2(0, JumpHeight), ForceMode2D.Impulse);
             heightRef.GetComponent<Animator>().SetTrigger("stretch");
