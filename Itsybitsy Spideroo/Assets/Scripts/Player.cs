@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     public float JumpHeight;
     public SpriteRenderer spiderRef;
     public GameObject heightRef;
+    public float borderLeft = -3.5f;
+    public float borderRight = 3.5f;
 
     //privat
     Rigidbody2D myRigidbody;
@@ -28,10 +30,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         var movement = Input.GetAxis("Horizontal");
+        if (!(transform.position.x > borderRight && movement > 0) && !(transform.position.x < borderLeft && movement < 0))
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
-        //myRigidbody.transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
-        //Vector3 dis = 
-        //myRigidbody.MovePosition(myRigidbody.transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed);
 
         Vector3 characterScale = transform.localScale;
         if (Input.GetAxis("Horizontal") < 0)
