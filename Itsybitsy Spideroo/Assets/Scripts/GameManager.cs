@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameObject spiderRef;
+    public static bool p_trampoline = false;
+    public static bool p_glide = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,19 @@ public class GameManager : MonoBehaviour
     public static GameObject getSpiderRef()
     {
         return spiderRef;
+    }
+
+    public static void AcitvateTrampo()
+    {
+        p_trampoline = true;
+        p_glide = false;
+        spiderRef.GetComponent<Player>().setGlideEffect(p_glide);
+    }
+    public static void AcitvateGlide()
+    {
+        p_trampoline = false;
+        p_glide = true;
+        spiderRef.GetComponent<Player>().setGlideEffect(p_glide);
     }
 
 }

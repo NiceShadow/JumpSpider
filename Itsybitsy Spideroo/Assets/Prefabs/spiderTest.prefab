@@ -341,7 +341,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -358,11 +358,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 5
+  AirSpeed: 0
   JumpHeight: 6.24
+  TrampoJumpHeight: 12
   spiderRef: {fileID: 0}
   heightRef: {fileID: 671945521751293707}
   borderLeft: -3.5
   borderRight: 3.5
+  hasGlide: 0
+  glideSpeed: 1.5
 --- !u!1 &9163286156996274714
 GameObject:
   m_ObjectHideFlags: 0
