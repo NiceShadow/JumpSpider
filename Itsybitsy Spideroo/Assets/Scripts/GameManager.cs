@@ -36,4 +36,10 @@ public class GameManager : MonoBehaviour
         spiderRef.GetComponent<Player>().setGlideEffect(p_glide);
     }
 
+    public static float velocitySize()
+    {
+
+        return spiderRef.GetComponent<Player>().myRigidbody.velocity.y;
+    }
+
 }

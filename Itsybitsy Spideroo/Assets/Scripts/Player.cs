@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     public float glideSpeed = 1.5f;
 
     //privat
-    Rigidbody2D myRigidbody;
+    public Rigidbody2D myRigidbody;
     Vector2 initialScale;
     bool LandedAlready;
     bool spacePressed = false;
@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift)) shiftPressed = true;
         if (Input.GetKeyUp(KeyCode.LeftShift)) shiftPressed = false;
 
-        Debug.Log(myRigidbody.velocity.y);
+
 
         if (spacePressed &&  Mathf.Abs(myRigidbody.velocity.y) < 0.001f && canJump)
         {

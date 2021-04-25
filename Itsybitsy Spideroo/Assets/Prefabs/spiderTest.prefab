@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 8008315376167798257}
   m_Layer: 0
   m_Name: spiderTest
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -367,6 +367,7 @@ MonoBehaviour:
   borderRight: 3.5
   hasGlide: 0
   glideSpeed: 1.5
+  myRigidbody: {fileID: 0}
 --- !u!1 &9163286156996274714
 GameObject:
   m_ObjectHideFlags: 0
