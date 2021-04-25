@@ -14,25 +14,17 @@ public class Shadow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 1f);
-        if (hit)
+        RaycastHit2D hit1 = Physics2D.Raycast(new Vector2(transform.position.x + 0.14f, transform.position.y), -Vector2.up, 1f);
+        RaycastHit2D hit2 = Physics2D.Raycast(new Vector2(transform.position.x - 0.14f, transform.position.y), -Vector2.up, 1f);
+        if (hit1 && hit2)
         {
-            float opacity = 1 - hit.distance;
-            shadowRef.material.color = new Color(1f, 1f, 1f, opacity * 0.7f);
-            shadowRef.transform.position = new Vector2(hit.point.x, hit.point.y -0.1f);
+            float opacity = 1 - hit1.distance;
+            shadowRef.material.color = new Color(1f, 1f, 1f, opacity * 0.3f);
+            shadowRef.transform.position = new Vector2(hit1.point.x - 0.07f, hit1.point.y -0.1f);
         }
         else
         {
             shadowRef.material.color = new Color(1f, 1f, 1f, 0.0f);
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-
     }
 }
