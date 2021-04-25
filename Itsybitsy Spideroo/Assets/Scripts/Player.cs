@@ -6,7 +6,9 @@ public class Player : MonoBehaviour
 {
     //public
     public float MovementSpeed;
+    public float AirSpeed;
     public float JumpHeight;
+    public float TrampoJumpHeight = 12;
     public SpriteRenderer spiderRef;
     public GameObject heightRef;
     public float borderLeft = -3.5f;
@@ -31,7 +33,13 @@ public class Player : MonoBehaviour
     {
         var movement = Input.GetAxis("Horizontal");
         if (!(transform.position.x > borderRight && movement > 0) && !(transform.position.x < borderLeft && movement < 0))
-        transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
+        {
+            if (LandedAlready)
+                transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
+            else
+                transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * AirSpeed;
+        }
+
 
         Vector3 characterScale = transform.localScale;
         if (Input.GetAxis("Horizontal") < 0)
@@ -49,6 +57,7 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump")) spacePressed = true;
         if (Input.GetButtonUp("Jump")) spacePressed = false;
 
+        Debug.Log(myRigidbody.velocity.y);
 
         if (spacePressed &&  Mathf.Abs(myRigidbody.velocity.y) < 0.001f)
         {
@@ -65,12 +74,17 @@ public class Player : MonoBehaviour
             playLanding();
             LandedAlready = true;
         }
-
     }
 
     void playLanding()
     {
         heightRef.GetComponent<Animator>().SetTrigger("squash");
+    }
+
+    public void JumpOnTrampoline()
+    {
+        myRigidbody.velocity = Vector2.zero;
+        myRigidbody.AddForce(new Vector2(0, TrampoJumpHeight), ForceMode2D.Impulse);
     }
 
 }

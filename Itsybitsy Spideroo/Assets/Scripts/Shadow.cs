@@ -20,7 +20,7 @@ public class Shadow : MonoBehaviour
         {
             float opacity = 1 - hit1.distance;
             shadowRef.material.color = new Color(1f, 1f, 1f, opacity * 0.3f);
-            shadowRef.transform.position = new Vector2(hit1.point.x, hit1.point.y -0.1f);
+            shadowRef.transform.position = new Vector2(hit1.point.x - 0.07f, hit1.point.y -0.1f);
         }
         else
         {
