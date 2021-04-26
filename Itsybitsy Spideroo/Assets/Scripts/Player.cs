@@ -269,6 +269,14 @@ public class Player : MonoBehaviour
             GameManager.p_glide = false;
             GameManager.p_trampoline = false;
             GameManager.play_a5();
+
+            GameObject[] allObjects = GameObject.FindGameObjectsWithTag("stone");
+            Debug.Log(allObjects.Length);
+            foreach (GameObject obj in allObjects)
+            {
+                Destroy(obj);
+            }
+
         }
         else
         {
