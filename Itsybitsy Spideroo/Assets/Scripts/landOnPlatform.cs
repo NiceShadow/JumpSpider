@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pu_trampo : MonoBehaviour
+public class landOnPlatform : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -20,15 +20,7 @@ public class pu_trampo : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-
-            GameManager.AcitvateTrampo();
-            GameManager.play_a10();
-            gameObject.SetActive(false);
+            GameManager.play_a8();
         }
-    }
-
-    public void reactivate()
-    {
-        gameObject.SetActive(true);
     }
 }

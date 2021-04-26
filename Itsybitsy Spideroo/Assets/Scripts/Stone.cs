@@ -24,6 +24,7 @@ public class Stone : MonoBehaviour
             {
                 Destroy(warning);
                 updateWarning = false;
+                GameManager.play_a15();
             }
         }
 

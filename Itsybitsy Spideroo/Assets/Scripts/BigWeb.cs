@@ -26,6 +26,8 @@ public class BigWeb : MonoBehaviour
     {
         if (collision.tag == "Player" && GameManager.spiderRef.GetComponent<Player>().finalJumping)
             breakWeb();
+        else if (collision.tag == "Player")
+            GameManager.play_a7();
     }
 
     void breakWeb()
@@ -34,6 +36,7 @@ public class BigWeb : MonoBehaviour
         webRef.GetComponent<Animator>().SetTrigger("destroy");
         brokenWeb.material.color = new Color(1f, 1f, 1f, 1f);
         GameManager.bremsen(webParent.GetComponent<BigWeb2>().destroyHelmet);
+        GameManager.play_a11();
     }
 
     public void unbreakWeb()

@@ -109,6 +109,7 @@ public class Player : MonoBehaviour
                 myRigidbody.AddForce(new Vector2(0, JumpHeight), ForceMode2D.Impulse);
                 heightRef.GetComponent<Animator>().SetTrigger("stretch");
                 JumpsUsed++;
+                GameManager.play_a4();
                 GameManager.updateUI();
             }
         }
@@ -119,6 +120,7 @@ public class Player : MonoBehaviour
                 myRigidbody.AddForce(new Vector2(0, JumpHeight), ForceMode2D.Impulse);
                 heightRef.GetComponent<Animator>().SetTrigger("stretch");
                 JumpsUsed++;
+                GameManager.play_a4();
                 GameManager.updateUI();
             }
         }
@@ -183,6 +185,7 @@ public class Player : MonoBehaviour
                 anim1();
                 JumpsUsed++;
                 GameManager.updateUI();
+                GameManager.cpIndex = GameManager.currentFinalPlat.GetComponent<FinalPlat>().platformNumber;
             }
         }
         if (finalJumping)
@@ -247,6 +250,7 @@ public class Player : MonoBehaviour
         heightRef.GetComponent<Animator>().SetTrigger("stretch");
         JumpsUsed++;
         GameManager.updateUI();
+        GameManager.play_a9();
         //Invoke("unblockJump", 0.1f);
     }
     public void unblockJump()
@@ -263,7 +267,8 @@ public class Player : MonoBehaviour
             spiderRef.size = new Vector3(1.08032f, 1.058973f, 1f);
             hasGlide = false;
             GameManager.p_glide = false;
-            GameManager.p_trampoline = false;          
+            GameManager.p_trampoline = false;
+            GameManager.play_a5();
         }
         else
         {

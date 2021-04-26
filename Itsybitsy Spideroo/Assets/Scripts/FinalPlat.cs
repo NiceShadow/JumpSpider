@@ -8,7 +8,7 @@ public class FinalPlat : MonoBehaviour
     public SpriteRenderer targetRef2;
 
     bool used;
-    int platformNumber;
+    public int platformNumber;
     // Start is called before the first frame update
     void Start()
     {

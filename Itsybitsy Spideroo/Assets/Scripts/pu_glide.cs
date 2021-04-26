@@ -20,6 +20,7 @@ public class pu_glide : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            GameManager.play_a10();
             GameManager.AcitvateGlide();
             gameObject.SetActive(false);
         }
