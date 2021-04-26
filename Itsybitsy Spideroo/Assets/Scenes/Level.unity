@@ -6183,6 +6183,11 @@ MonoBehaviour:
   CameraSpeedUp: 0.5
   CameraSpeedDown: 8
   clampBottomHeight: -134
+  clampTopHeight: 153.9
+  cp1_StoneSpawnFrame: {x: 5, y: 12}
+  cp2_StoneSpawnFrame: {x: 5, y: 12}
+  cp3_StoneSpawnFrame: {x: 5, y: 12}
+  cp4_StoneSpawnFrame: {x: 5, y: 12}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -6234,7 +6239,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 154.7, z: -10}
+  m_LocalPosition: {x: 0, y: 153.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
