@@ -227,7 +227,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: a23ae385f72722046b5fffecfa3d37ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -482,6 +482,24 @@ MonoBehaviour:
   dead: 0
   deadSpider: {fileID: 21300000, guid: 2924561bfc5a2a849a822eff4b75ce55, type: 3}
   aliveSpider: {fileID: 21300000, guid: 40e623d2d21762843b936ed9c7b70d27, type: 3}
+  Web1: {fileID: 0}
+  Web2: {fileID: 0}
+  Web3: {fileID: 0}
+  Web4: {fileID: 0}
+  Web5: {fileID: 0}
+  CheckPoint1: {fileID: 0}
+  CheckPoint2: {fileID: 0}
+  CheckPoint3: {fileID: 0}
+  CheckPoint4: {fileID: 0}
+  Platform1: {fileID: 0}
+  Platform2: {fileID: 0}
+  Platform3: {fileID: 0}
+  Platform4: {fileID: 0}
+  Platform5: {fileID: 0}
+  Glider1: {fileID: 0}
+  Glider2: {fileID: 0}
+  Trampoline1: {fileID: 0}
+  Trampoline2: {fileID: 0}
   myRigidbody: {fileID: 0}
 --- !u!95 &8454168675163400229
 Animator:
@@ -573,7 +591,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: c7f1cb16c23130442adf8b20ed4d58d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
