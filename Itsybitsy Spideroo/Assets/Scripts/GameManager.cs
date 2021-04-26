@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spiderRef = GameObject.Find("spiderTest");
+        spiderRef = GameObject.Find("spiderJana");
         ui = uiRef.GetComponent<UI_Script>();
         spider = spiderRef.GetComponent<Player>();
         SetRatio(9, 16);
@@ -132,10 +132,21 @@ public class GameManager : MonoBehaviour
     {
         ui.deathScreen1.SetActive(true);
     }
+    public static void showWin()
+    {
+        ui.deathScreen1.SetActive(true);
+    }
+    public static void showPause()
+    {
+        ui.deathScreen1.SetActive(true);
+        Time.timeScale = 0;
+    }
 
     public static void hideGameOverRetry()
     {
         ui.deathScreen1.SetActive(false);
+        ui.winScreen.SetActive(false);
+        ui.pause.SetActive(false);
         spider.ResetWebs();
         spider.die(false);
     }

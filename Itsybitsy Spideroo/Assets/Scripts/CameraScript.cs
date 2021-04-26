@@ -20,7 +20,7 @@ public class CameraScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spiderRef = GameObject.Find("spiderTest");
+        spiderRef = GameObject.Find("spiderJana");
         StartStones();
 
     }

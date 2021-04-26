@@ -20,4 +20,9 @@ public class RetryButton : MonoBehaviour
     {
         GameManager.hideGameOverRetry();
     }
+
+    public void Exit()
+    {
+        GameManager.hideGameOverRetry();
+    }
 }

@@ -184,8 +184,10 @@ public class Player : MonoBehaviour
                 helmet.enabled = true;
                 anim1();
                 JumpsUsed++;
+                GameManager.cpIndex = GameManager.currentFinalPlat.GetComponent<FinalPlat>().par.GetComponent<fplatform2>().numberStartingAt1;
+                Debug.Log("Checkpoint" + GameManager.cpIndex);
                 GameManager.updateUI();
-                GameManager.cpIndex = GameManager.currentlyOnPlatNumber;
+
             }
         }
         if (finalJumping)
