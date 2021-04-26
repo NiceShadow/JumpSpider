@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BigWeb2 : MonoBehaviour
+public class RetryButton : MonoBehaviour
 {
-    public bool destroyHelmet;
-    public BigWeb webRef;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +16,8 @@ public class BigWeb2 : MonoBehaviour
         
     }
 
-    public void reset1()
+    public void Retry()
     {
-        webRef.unbreakWeb();
+        GameManager.hideGameOverRetry();
     }
 }

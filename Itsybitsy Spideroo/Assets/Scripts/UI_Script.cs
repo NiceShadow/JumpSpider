@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class BigWeb2 : MonoBehaviour
+
+public class UI_Script : MonoBehaviour
 {
-    public bool destroyHelmet;
-    public BigWeb webRef;
+    public Text jumpCounter;
+    public GameObject deathScreen1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +21,4 @@ public class BigWeb2 : MonoBehaviour
         
     }
 
-    public void reset1()
-    {
-        webRef.unbreakWeb();
-    }
 }

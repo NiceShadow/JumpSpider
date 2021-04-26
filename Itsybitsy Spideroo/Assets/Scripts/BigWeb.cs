@@ -24,11 +24,8 @@ public class BigWeb : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (GameManager.velocitySize() < -webParent.GetComponent<BigWeb2>().speedToDestroy*12)
-        {
+        if (collision.tag == "Player" && GameManager.spiderRef.GetComponent<Player>().finalJumping)
             breakWeb();
-        }
-
     }
 
     void breakWeb()
@@ -36,5 +33,13 @@ public class BigWeb : MonoBehaviour
         colliderRef.enabled = false;
         webRef.GetComponent<Animator>().SetTrigger("destroy");
         brokenWeb.material.color = new Color(1f, 1f, 1f, 1f);
+        GameManager.bremsen(webParent.GetComponent<BigWeb2>().destroyHelmet);
+    }
+
+    public void unbreakWeb()
+    {
+        colliderRef.enabled = true;
+        brokenWeb.material.color = new Color(1f, 1f, 1f, 0f);
+        webRef.GetComponent<Animator>().SetTrigger("show");
     }
 }
