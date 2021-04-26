@@ -8,13 +8,14 @@ public class FinalPlat : MonoBehaviour
     public SpriteRenderer targetRef2;
 
     bool used;
-
+    int platformNumber;
     // Start is called before the first frame update
     void Start()
     {
         targetRef2.material.color = new Color(1f, 1f, 1f, 0.3f);
         targetSprite = targetRef.GetComponent<SpriteRenderer>();
         targetSprite.enabled = false;
+        platformNumber = targetRef.GetComponent<fplatform2>().numberStartingAt1;
     }
 
     SpriteRenderer targetSprite;
@@ -47,5 +48,11 @@ public class FinalPlat : MonoBehaviour
     {
         targetRef2.enabled = false;
         used = true;
+    }
+
+    public void SetUnUsed()
+    {
+        targetRef2.enabled = true;
+        used = false;
     }
 }

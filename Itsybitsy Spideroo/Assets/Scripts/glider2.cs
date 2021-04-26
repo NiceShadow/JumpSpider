@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fplatform2 : MonoBehaviour
+public class glider2 : MonoBehaviour
 {
-    public FinalPlat fp;
-    public int numberStartingAt1 = 1;
+    public GameObject trig;
     // Start is called before the first frame update
     void Start()
     {

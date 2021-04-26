@@ -18,7 +18,15 @@ public class pu_glide : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.AcitvateGlide();
-        GameObject.Destroy(gameObject);
+        if (collision.tag == "Player")
+        {
+            GameManager.AcitvateGlide();
+            gameObject.SetActive(false);
+        }
+    }
+
+    public void reactivate()
+    {
+        gameObject.SetActive(true);
     }
 }

@@ -26,11 +26,26 @@ public class Player : MonoBehaviour
     public Sprite aliveSpider;
 
     public GameObject Web1;
+    public GameObject Web2;
+    public GameObject Web3;
+    public GameObject Web4;
+    public GameObject Web5;
 
     public GameObject CheckPoint1;
+    public GameObject CheckPoint2;
+    public GameObject CheckPoint3;
+    public GameObject CheckPoint4;
 
     public GameObject Platform1;
+    public GameObject Platform2;
+    public GameObject Platform3;
+    public GameObject Platform4;
+    public GameObject Platform5;
 
+    public GameObject Glider1;
+    public GameObject Glider2;
+    public GameObject Trampoline1;
+    public GameObject Trampoline2;
 
     //privat
     public Rigidbody2D myRigidbody;
@@ -227,12 +242,12 @@ public class Player : MonoBehaviour
     public void JumpOnTrampoline()
     {
         myRigidbody.velocity = Vector2.zero;
-        canJump = false;
+        //canJump = false;
         myRigidbody.AddForce(new Vector2(0, TrampoJumpHeight), ForceMode2D.Impulse);
         heightRef.GetComponent<Animator>().SetTrigger("stretch");
         JumpsUsed++;
         GameManager.updateUI();
-        Invoke("unblockJump", 0.1f);
+        //Invoke("unblockJump", 0.1f);
     }
     public void unblockJump()
     {
@@ -246,20 +261,47 @@ public class Player : MonoBehaviour
         {
             spiderRef.sprite = deadSpider;
             spiderRef.size = new Vector3(1.08032f, 1.058973f, 1f);
+            hasGlide = false;
+            GameManager.p_glide = false;
+            GameManager.p_trampoline = false;          
         }
         else
         {
             spiderRef.sprite = aliveSpider;
             spiderRef.size = new Vector3(1.08032f, 1.058973f, 1f);
-            transform.position = CheckPoint1.transform.position;
-           // Platform1.GetComponent<>();
         }
 
     }
 
     public void ResetWebs()
     {
-        Web1.GetComponent<BigWeb2>().reset1();
+        if (GameManager.cpIndex == 1)
+        {
+            transform.position = CheckPoint1.transform.position;
+        }
+
+        if (GameManager.cpIndex == 2)
+        {
+            transform.position = CheckPoint2.transform.position;
+            Platform1.GetComponent<fplatform2>().fp.SetUnUsed();
+            Glider1.GetComponent<glider2>().trig.GetComponent<pu_glide>().reactivate();
+        }
+
+        if (GameManager.cpIndex == 3)
+        {
+            transform.position = CheckPoint3.transform.position;
+            Glider1.GetComponent<trampo2>().trig.GetComponent<pu_trampo>().reactivate();
+        }
+
+        if (GameManager.cpIndex == 4)
+        {
+            transform.position = CheckPoint4.transform.position;
+            Glider1.GetComponent<trampo2>().trig.GetComponent<pu_trampo>().reactivate();
+            ///Web1.GetComponent<BigWeb2>().reset1();
+
+        }
+
     }
+
 
 }

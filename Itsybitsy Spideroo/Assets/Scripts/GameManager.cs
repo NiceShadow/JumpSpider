@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public Canvas uiRef;
     public GameObject Web1;
 
+    public static int cpIndex;
+
 
     public static Player spider;
 

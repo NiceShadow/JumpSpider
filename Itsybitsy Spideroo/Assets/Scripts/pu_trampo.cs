@@ -18,7 +18,15 @@ public class pu_trampo : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.AcitvateTrampo();
-        GameObject.Destroy(gameObject);
+        if (collision.tag == "Player")
+        {
+            GameManager.AcitvateTrampo();
+            gameObject.SetActive(false);
+        }
+    }
+
+    public void reactivate()
+    {
+        gameObject.SetActive(true);
     }
 }
