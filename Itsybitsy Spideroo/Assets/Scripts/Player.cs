@@ -185,7 +185,7 @@ public class Player : MonoBehaviour
                 anim1();
                 JumpsUsed++;
                 GameManager.updateUI();
-                GameManager.cpIndex = GameManager.currentFinalPlat.GetComponent<FinalPlat>().platformNumber;
+                GameManager.cpIndex = GameManager.currentlyOnPlatNumber;
             }
         }
         if (finalJumping)

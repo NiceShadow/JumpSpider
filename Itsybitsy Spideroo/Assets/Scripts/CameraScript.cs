@@ -10,6 +10,7 @@ public class CameraScript : MonoBehaviour
     public float CameraSpeedUp = 0.5f;
     public float CameraSpeedDown = 3f;
     public float clampBottomHeight = 0f;
+    public float clampTopHeight = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (spiderRef.transform.position.y > transform.position.y +2f)
+        if (spiderRef.transform.position.y > transform.position.y +2f && transform.position.y < clampTopHeight)
         {
             transform.position = new Vector3(0, Mathf.Lerp(transform.position.y, spiderRef.transform.position.y - 2f, CameraSpeedUp * Time.deltaTime), -10f);
         }
@@ -30,6 +31,8 @@ public class CameraScript : MonoBehaviour
         {
             transform.position = new Vector3(0, Mathf.Lerp(transform.position.y, spiderRef.transform.position.y + 2f, CameraSpeedDown * Time.deltaTime), -10f);
         }
+
+
 
     }
     void StartStones()

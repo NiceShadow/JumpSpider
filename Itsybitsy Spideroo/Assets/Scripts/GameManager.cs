@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 
     public static UI_Script ui;
 
+    public static int currentlyOnPlatNumber;
+
 
     //sounds
     public AudioSource[] sounds;

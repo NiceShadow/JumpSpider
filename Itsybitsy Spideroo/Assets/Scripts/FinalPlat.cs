@@ -5,17 +5,19 @@ using UnityEngine;
 public class FinalPlat : MonoBehaviour
 {
     public GameObject targetRef;
+    public GameObject par;
     public SpriteRenderer targetRef2;
 
     bool used;
-    public int platformNumber;
+    public static int platformNumber;
     // Start is called before the first frame update
     void Start()
     {
         targetRef2.material.color = new Color(1f, 1f, 1f, 0.3f);
         targetSprite = targetRef.GetComponent<SpriteRenderer>();
         targetSprite.enabled = false;
-        platformNumber = targetRef.GetComponent<fplatform2>().numberStartingAt1;
+        platformNumber = par.GetComponent<fplatform2>().numberStartingAt1;
+        Debug.Log(par.GetComponent<fplatform2>().numberStartingAt1);
     }
 
     SpriteRenderer targetSprite;
@@ -31,6 +33,7 @@ public class FinalPlat : MonoBehaviour
         {
             GameManager.onFinalPlatfrom = true;
             GameManager.Target = targetRef.transform.position;
+            GameManager.currentlyOnPlatNumber = platformNumber;
             GameManager.currentFinalPlat = gameObject;
             targetRef2.material.color = new Color(1f, 1f, 1f, 1f);
         }

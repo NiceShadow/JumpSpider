@@ -333,7 +333,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetRef: {fileID: 9082480554809787068}
+  par: {fileID: 5737016574118196663}
   targetRef2: {fileID: 8203908504316479748}
+  platformNumber: 0
 --- !u!1 &2565179534785276415
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fp: {fileID: 6633591023399504751}
+  numberStartingAt1: 1
 --- !u!1 &6909103780570075529
 GameObject:
   m_ObjectHideFlags: 0

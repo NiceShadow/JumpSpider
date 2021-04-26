@@ -33,6 +33,7 @@ public class BigWeb : MonoBehaviour
     void breakWeb()
     {
         colliderRef.enabled = false;
+        gameObject.SetActive(false);
         webRef.GetComponent<Animator>().SetTrigger("destroy");
         brokenWeb.material.color = new Color(1f, 1f, 1f, 1f);
         GameManager.bremsen(webParent.GetComponent<BigWeb2>().destroyHelmet);
@@ -42,6 +43,7 @@ public class BigWeb : MonoBehaviour
     public void unbreakWeb()
     {
         colliderRef.enabled = true;
+        gameObject.SetActive(true);
         brokenWeb.material.color = new Color(1f, 1f, 1f, 0f);
         webRef.GetComponent<Animator>().SetTrigger("show");
     }
