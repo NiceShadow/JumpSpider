@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public Canvas uiRef;
     public GameObject Web1;
 
-    public static int cpIndex;
+    public static int cpIndex = 0;
 
 
     public static Player spider;
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Screen.fullScreenMode = FullScreenMode.Windowed;
     }
 
     void SetRatio(float w, float h)
@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour
     }
     public static void showWin()
     {
-        ui.deathScreen1.SetActive(true);
+        ui.winScreen.SetActive(true);
     }
     public static void showPause()
     {
@@ -147,8 +147,9 @@ public class GameManager : MonoBehaviour
         ui.deathScreen1.SetActive(false);
         ui.winScreen.SetActive(false);
         ui.pause.SetActive(false);
-        spider.ResetWebs();
         spider.die(false);
+        spider.ResetWebs();
+
     }
 
     public static void play_a1()

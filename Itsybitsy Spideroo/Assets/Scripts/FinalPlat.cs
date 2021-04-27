@@ -57,5 +57,6 @@ public class FinalPlat : MonoBehaviour
     {
         targetRef2.enabled = true;
         used = false;
+        targetRef2.material.color = new Color(1f, 1f, 1f, 0.3f);
     }
 }

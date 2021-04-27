@@ -31,4 +31,9 @@ public class pu_trampo : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
+
+    public void hideAgain()
+    {
+        gameObject.SetActive(false);
+    }
 }

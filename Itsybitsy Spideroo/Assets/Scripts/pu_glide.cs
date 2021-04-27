@@ -30,4 +30,9 @@ public class pu_glide : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
+
+    public void hideAgain()
+    {
+        gameObject.SetActive(false);
+    }
 }

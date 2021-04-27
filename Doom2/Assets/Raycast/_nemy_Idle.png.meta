@@ -1,0 +1,496 @@
+fileFormatVersion: 2
+guid: bbce4e33e55bdce4dae300b72bf85d54
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3065151517363227067
+    second: _nemy_Idle_0
+  - first:
+      213: -7037911797172239350
+    second: _nemy_Idle_1
+  - first:
+      213: 7621894165350727094
+    second: _nemy_Idle_2
+  - first:
+      213: -6278541251491889487
+    second: _nemy_Idle_3
+  - first:
+      213: 750821770275213992
+    second: _nemy_Idle_4
+  - first:
+      213: 4054134288044076428
+    second: _nemy_Idle_5
+  - first:
+      213: 2985893441667854490
+    second: _nemy_Idle_6
+  - first:
+      213: 1763779439478448739
+    second: _nemy_Idle_7
+  - first:
+      213: 5394240876167985166
+    second: _nemy_Idle_8
+  - first:
+      213: 5540808787602383970
+    second: _nemy_Idle_9
+  - first:
+      213: -5476357174444191029
+    second: _nemy_Idle_10
+  - first:
+      213: 3767475040186882975
+    second: _nemy_Idle_11
+  - first:
+      213: 4099902740460331318
+    second: _nemy_Idle_12
+  - first:
+      213: 6272684025120650526
+    second: _nemy_Idle_13
+  - first:
+      213: 452610236803669751
+    second: _nemy_Idle_14
+  - first:
+      213: -239233396654481302
+    second: _nemy_Idle_15
+  - first:
+      213: -93538473951655764
+    second: _nemy_Idle_16
+  - first:
+      213: 8611680027402509808
+    second: _nemy_Idle_17
+  - first:
+      213: 9097677508087397720
+    second: _nemy_Idle_18
+  - first:
+      213: 6034887327101032673
+    second: _nemy_Idle_19
+  - first:
+      213: 3864029816244661758
+    second: _nemy_Idle_20
+  - first:
+      213: 1852453706710330769
+    second: _nemy_Idle_21
+  - first:
+      213: -4958320927475365071
+    second: _nemy_Idle_22
+  - first:
+      213: 2036299646430947528
+    second: _nemy_Idle_23
+  - first:
+      213: 4324787545762809079
+    second: _nemy_Idle_24
+  - first:
+      213: -623769383897500854
+    second: _nemy_Idle_25
+  - first:
+      213: -1214018489815551338
+    second: _nemy_Idle_26
+  - first:
+      213: -4417377916375581606
+    second: _nemy_Idle_27
+  - first:
+      213: 1132699841539342334
+    second: _nemy_Idle_28
+  - first:
+      213: 5598918989790951294
+    second: _nemy_Idle_29
+  - first:
+      213: 1035325361942581525
+    second: _nemy_Idle_30
+  - first:
+      213: -954912647812650838
+    second: _nemy_Idle_31
+  - first:
+      213: 7039331696995206002
+    second: _nemy_Idle_32
+  - first:
+      213: 6740528933147331152
+    second: _nemy_Idle_33
+  - first:
+      213: -8686838685447908208
+    second: _nemy_Idle_34
+  - first:
+      213: 2951456558554730419
+    second: _nemy_Idle_35
+  - first:
+      213: -2880447150567984976
+    second: _nemy_Idle_36
+  - first:
+      213: 6884937205952896322
+    second: _nemy_Idle_37
+  - first:
+      213: -4043789863033497724
+    second: _nemy_Idle_38
+  - first:
+      213: 6887860454065074057
+    second: _nemy_Idle_39
+  - first:
+      213: -252733510953131313
+    second: _nemy_Idle_40
+  - first:
+      213: 8518470960349762827
+    second: _nemy_Idle_41
+  - first:
+      213: 1447775019320889007
+    second: _nemy_Idle_42
+  - first:
+      213: 3031985944035498362
+    second: _nemy_Idle_43
+  - first:
+      213: 7008895541331243876
+    second: _nemy_Idle_44
+  - first:
+      213: 5928963956603455517
+    second: _nemy_Idle_45
+  - first:
+      213: 8016020599652216373
+    second: _nemy_Idle_46
+  - first:
+      213: 8531052350636108733
+    second: _nemy_Idle_47
+  - first:
+      213: -7016998253263331974
+    second: _nemy_Idle_48
+  - first:
+      213: -8182535092538371010
+    second: _nemy_Idle_49
+  - first:
+      213: 4025767379538484232
+    second: _nemy_Idle_50
+  - first:
+      213: -4928500442311172543
+    second: _nemy_Idle_51
+  - first:
+      213: -12199758011660677
+    second: _nemy_Idle_52
+  - first:
+      213: -8739577105554929578
+    second: _nemy_Idle_53
+  - first:
+      213: 7971547755050968198
+    second: _nemy_Idle_54
+  - first:
+      213: 7789037409699019596
+    second: _nemy_Idle_55
+  - first:
+      213: 1048425997693406278
+    second: _nemy_Idle_56
+  - first:
+      213: 6358792951073413796
+    second: _nemy_Idle_57
+  - first:
+      213: -6937764201348955190
+    second: _nemy_Idle_58
+  - first:
+      213: 7039635528007195873
+    second: _nemy_Idle_59
+  - first:
+      213: -2410485991757168035
+    second: _nemy_Idle_60
+  - first:
+      213: 5288727575620771666
+    second: _nemy_Idle_61
+  - first:
+      213: 3155114617937962068
+    second: _nemy_Idle_62
+  - first:
+      213: 619553763379914982
+    second: _nemy_Idle_63
+  - first:
+      213: -4509822420772897968
+    second: _nemy_Idle_64
+  - first:
+      213: 78289338864777986
+    second: _nemy_Idle_65
+  - first:
+      213: 6212196529463318415
+    second: _nemy_Idle_66
+  - first:
+      213: -2793043622317335551
+    second: _nemy_Idle_67
+  - first:
+      213: -9210533452677939006
+    second: _nemy_Idle_68
+  - first:
+      213: 42258180778333769
+    second: _nemy_Idle_69
+  - first:
+      213: 2094647344189933296
+    second: _nemy_Idle_70
+  - first:
+      213: -4769872633718330288
+    second: _nemy_Idle_71
+  - first:
+      213: 2612204815030510347
+    second: _nemy_Idle_72
+  - first:
+      213: -2564643550889322700
+    second: _nemy_Idle_73
+  - first:
+      213: -7932460486031006703
+    second: _nemy_Idle_74
+  - first:
+      213: 7716135224201901700
+    second: _nemy_Idle_75
+  - first:
+      213: -6319199021201996227
+    second: _nemy_Idle_76
+  - first:
+      213: -4706116929147949494
+    second: _nemy_Idle_77
+  - first:
+      213: -9107737446732846883
+    second: _nemy_Idle_78
+  - first:
+      213: 7972829382557043800
+    second: _nemy_Idle_79
+  - first:
+      213: 8471776603804930144
+    second: _nemy_Idle_80
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: _nemy_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 422
+        width: 201
+        height: 211
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb94f2fa01b998a20800000000000000
+      internalID: 3065151517363227067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _nemy_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 422
+        width: 201
+        height: 211
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0484094280545e90800000000000000
+      internalID: -7037911797172239350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _nemy_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 422
+        width: 201
+        height: 211
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd3a516c5866c960800000000000000
+      internalID: 7621894165350727094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _nemy_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 211
+        width: 201
+        height: 211
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be70353ff32ed8a0800000000000000
+      internalID: -6278541251491889487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _nemy_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 211
+        width: 201
+        height: 211
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a252ea0c647b6a00800000000000000
+      internalID: 750821770275213992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _nemy_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 211
+        width: 201
+        height: 211
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d299eb7ad234830800000000000000
+      internalID: 4054134288044076428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _nemy_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 201
+        height: 211
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90f7c7e346007920800000000000000
+      internalID: 2985893441667854490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
