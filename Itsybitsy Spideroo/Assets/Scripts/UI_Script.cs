@@ -8,6 +8,8 @@ public class UI_Script : MonoBehaviour
 {
     public Text jumpCounter;
     public GameObject deathScreen1;
+    public GameObject winScreen;
+    public GameObject pause;
 
     // Start is called before the first frame update
     void Start()

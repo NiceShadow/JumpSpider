@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public Canvas uiRef;
     public GameObject Web1;
 
-    public static int cpIndex;
+    public static int cpIndex = 0;
 
 
     public static Player spider;
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spiderRef = GameObject.Find("spiderTest");
+        spiderRef = GameObject.Find("spiderJana");
         ui = uiRef.GetComponent<UI_Script>();
         spider = spiderRef.GetComponent<Player>();
         SetRatio(9, 16);
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Screen.fullScreenMode = FullScreenMode.Windowed;
     }
 
     void SetRatio(float w, float h)
@@ -132,12 +132,24 @@ public class GameManager : MonoBehaviour
     {
         ui.deathScreen1.SetActive(true);
     }
+    public static void showWin()
+    {
+        ui.winScreen.SetActive(true);
+    }
+    public static void showPause()
+    {
+        ui.deathScreen1.SetActive(true);
+        Time.timeScale = 0;
+    }
 
     public static void hideGameOverRetry()
     {
         ui.deathScreen1.SetActive(false);
-        spider.ResetWebs();
+        ui.winScreen.SetActive(false);
+        ui.pause.SetActive(false);
         spider.die(false);
+        spider.ResetWebs();
+
     }
 
     public static void play_a1()

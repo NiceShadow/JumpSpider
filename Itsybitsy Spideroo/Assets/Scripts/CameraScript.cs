@@ -17,10 +17,12 @@ public class CameraScript : MonoBehaviour
     public Vector2 cp3_StoneSpawnFrame = new Vector2(5, 12);
     public Vector2 cp4_StoneSpawnFrame = new Vector2(5, 12);
 
+    float multi = 1;
+
     // Start is called before the first frame update
     void Start()
     {
-        spiderRef = GameObject.Find("spiderTest");
+        spiderRef = GameObject.Find("spiderJana");
         StartStones();
 
     }
@@ -28,9 +30,14 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.p_trampoline)
+            multi = 5.36f;
+        else
+            multi = 1f;
+
         if (spiderRef.transform.position.y > transform.position.y +2f && transform.position.y < clampTopHeight)
         {
-            transform.position = new Vector3(0, Mathf.Lerp(transform.position.y, spiderRef.transform.position.y - 2f, CameraSpeedUp * Time.deltaTime), -10f);
+            transform.position = new Vector3(0, Mathf.Lerp(transform.position.y, spiderRef.transform.position.y - 2f, CameraSpeedUp * multi * Time.deltaTime), -10f);
         }
 
         if (spiderRef.transform.position.y < transform.position.y - 2f && transform.position.y > clampBottomHeight)
@@ -54,22 +61,22 @@ public class CameraScript : MonoBehaviour
         }
         if (GameManager.cpIndex == 1)
         {
-            Instantiate(stonePrefab, new Vector3(Random.Range(-6f, 6f), transform.position.y + Random.Range(20f, 25f), 0), Quaternion.identity);
+            Instantiate(stonePrefab, new Vector3(Random.Range(-6f, 6f), transform.position.y + Random.Range(24f, 35f), 0), Quaternion.identity);
             Invoke("throwAStone", Random.Range(cp1_StoneSpawnFrame.x, cp1_StoneSpawnFrame.y));
         }
         if (GameManager.cpIndex == 2)
         {
-            Instantiate(stonePrefab, new Vector3(Random.Range(-6f, 6f), transform.position.y + Random.Range(20f, 25f), 0), Quaternion.identity);
+            Instantiate(stonePrefab, new Vector3(Random.Range(-6f, 6f), transform.position.y + Random.Range(24f, 35f), 0), Quaternion.identity);
             Invoke("throwAStone", Random.Range(cp2_StoneSpawnFrame.x, cp2_StoneSpawnFrame.y));
         }
         if (GameManager.cpIndex == 3)
         {
-            Instantiate(stonePrefab, new Vector3(Random.Range(-6f, 6f), transform.position.y + Random.Range(20f, 25f), 0), Quaternion.identity);
+            Instantiate(stonePrefab, new Vector3(Random.Range(-5f, 5f), transform.position.y + Random.Range(24f, 35f), 0), Quaternion.identity);
             Invoke("throwAStone", Random.Range(cp3_StoneSpawnFrame.x, cp3_StoneSpawnFrame.y));
         }
         if (GameManager.cpIndex == 4)
         {
-            Instantiate(stonePrefab, new Vector3(Random.Range(-6f, 6f), transform.position.y + Random.Range(20f, 25f), 0), Quaternion.identity);
+            Instantiate(stonePrefab, new Vector3(Random.Range(-6f, 6f), transform.position.y + Random.Range(24f, 35f), 0), Quaternion.identity);
             Invoke("throwAStone", Random.Range(cp4_StoneSpawnFrame.x, cp4_StoneSpawnFrame.y));
         }
     }

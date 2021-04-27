@@ -46,6 +46,7 @@ public class Player : MonoBehaviour
     public GameObject Glider2;
     public GameObject Trampoline1;
     public GameObject Trampoline2;
+    public bool waitForLanding;
 
     //privat
     public Rigidbody2D myRigidbody;
@@ -56,7 +57,7 @@ public class Player : MonoBehaviour
     bool canJump = true;
     bool AimForFirstTarget;
     bool AimForFirstTarget2;
-    bool waitForLanding;
+
 
 
 
@@ -175,17 +176,28 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (GameManager.onFinalPlatfrom)
+            if (GameManager.onFinalPlatfrom && !finalJumping)
             {
                 spiderAni.GetComponent<Animator>().SetTrigger("jump");
                 finalJumping = true;
                 AimForFirstTarget = true;
-                GameManager.currentFinalPlat.GetComponent<FinalPlat>().SetUsed();
+                if (GameManager.cpIndex != 0)
+                    GameManager.currentFinalPlat.GetComponent<FinalPlat>().SetUsed();
                 helmet.enabled = true;
                 anim1();
                 JumpsUsed++;
+                if (GameManager.cpIndex == 3 && GameManager.currentFinalPlat.GetComponent<FinalPlat>().par.GetComponent<fplatform2>().numberStartingAt1 == 1)
+                {
+                    GameManager.cpIndex = 4;
+                }
+                else
+                {
+                    GameManager.cpIndex = GameManager.currentFinalPlat.GetComponent<FinalPlat>().par.GetComponent<fplatform2>().numberStartingAt1;
+                }
+
+                Debug.Log("Checkpoint" + GameManager.cpIndex);
                 GameManager.updateUI();
-                GameManager.cpIndex = GameManager.currentlyOnPlatNumber;
+
             }
         }
         if (finalJumping)
@@ -260,6 +272,8 @@ public class Player : MonoBehaviour
 
     public void die(bool pDead)
     {
+
+        Debug.Log("Jeeessssssssssssl o  " + pDead);
         dead = pDead;
         if (dead)
         {
@@ -296,20 +310,19 @@ public class Player : MonoBehaviour
         if (GameManager.cpIndex == 2)
         {
             transform.position = CheckPoint2.transform.position;
-            Platform1.GetComponent<fplatform2>().fp.SetUnUsed();
             Glider1.GetComponent<glider2>().trig.GetComponent<pu_glide>().reactivate();
         }
 
         if (GameManager.cpIndex == 3)
         {
             transform.position = CheckPoint3.transform.position;
-            Glider1.GetComponent<trampo2>().trig.GetComponent<pu_trampo>().reactivate();
+            Trampoline1.GetComponent<trampo2>().trig.GetComponent<pu_trampo>().reactivate();
         }
 
         if (GameManager.cpIndex == 4)
         {
             transform.position = CheckPoint4.transform.position;
-            Glider1.GetComponent<trampo2>().trig.GetComponent<pu_trampo>().reactivate();
+            Trampoline1.GetComponent<trampo2>().trig.GetComponent<pu_trampo>().reactivate();
             ///Web1.GetComponent<BigWeb2>().reset1();
 
         }

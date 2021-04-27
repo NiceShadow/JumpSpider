@@ -34,7 +34,7 @@ public class Stone : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            if (!GameManager.spider.finalJumping)
+            if (!GameManager.spider.finalJumping && !GameManager.spider.waitForLanding)
             {
                 GameManager.spider.die(true);
                 GameManager.showGameOver();
